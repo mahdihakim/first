@@ -10,12 +10,11 @@ class Main {
     System.out.println("donner un nombre n:"); 
     n = mynumber.nextInt();   
 
-    //Compute sum 
-    int i = 0;
-    while (i <= n) {
-     s=s+i;
-      i++;
-    }
-    System.out.println("s="+s);
+    //compute n
+    int u=2;
+    for(int i=0;i<n;i++)
+      u=3*u+4;
+    
+   System.out.println("u="+u);
 }
 }
