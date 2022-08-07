@@ -42,21 +42,21 @@ class Main {
     System.out.println();
  
 
-      //trie
-      for(int i=0;i<n-1;i++)
-        for(int j=i+1;j<n;j++)
-          if(t[i]>t[j])
-          {
-            temp=t[i];
-            t[i]=t[j];
-            t[j]=temp;
+     //trie a bull
+    for(int i=0;i<n;i++)
+    for(int j=0;j<n-1-i;j++)
+      if(t[j]>t[j+1])
+      {
+        temp=t[j];
+        t[j]=t[j+1];
+        t[j+1]=temp;
 
-          }
+      }
     //print t
     for(int i=0;i<n;i++)
       System.out.print(t[i] + " ");
     System.out.println();
-
+    
       
   
   
