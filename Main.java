@@ -4,17 +4,61 @@ class Main {
   public static void main(String[] args) {
     //Define variables
     Scanner mynumber = new Scanner(System.in);
-    int f=1 , n;
+   int[] t;
+    int s=0,min,max ,temp, n;
 
-    //Get n
+    //Get size of array
     System.out.println("donner un nombre n:"); 
-    n = mynumber.nextInt();   
+    n = mynumber.nextInt(); 
+    // create array of int
+    t=new int[n];
+    //get elements
+    for(int i=0;i<n;i++)
+    {
+      System.out.println("donner t["+i+"]:"); 
+      t[i]= mynumber.nextInt(); 
+    }
+    //Compute sum,min and max
+    min=t[0];
+    max=t[0]; 
+    for(int i=0;i<n;i++)
+    {
+      s+=t[i];
+      if (t[i]<min)
+          min=t[i];
+      else
+        if(t[i]>max)
+          max=t[i];
+    }
+    System.out.println("s="+s+" max= "+max+ " min= "+min );
+    //reverse
+    int[] r;
+    r=new int[n];
+    for(int i=0;i<n;i++)
+      r[i]=t[n-i-1];
+    //print r
+    for(int i=0;i<n;i++)
+      System.out.print(r[i] + " ");
+    System.out.println();
+ 
 
-    //Compute sum 
-    for(int i=1;i<=n;i++)
-    f=f*i ;
+      //trie
+      for(int i=0;i<n-1;i++)
+        for(int j=i+1;j<n;j++)
+          if(t[i]>t[j])
+          {
+            temp=t[i];
+            t[i]=t[j];
+            t[j]=temp;
+
+          }
+    //print t
+    for(int i=0;i<n;i++)
+      System.out.print(t[i] + " ");
+    System.out.println();
+
       
   
-    System.out.println("f="+f);
+  
 }
 }
