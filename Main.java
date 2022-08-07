@@ -6,7 +6,10 @@ class Main {
     Scanner mynumber = new Scanner(System.in);
    int[] t;
     int s=0,min,max ,temp, n;
+  String txt="bonjour";
+    System.out.println(txt.charAt(0));
 
+    
     //Get size of array
     System.out.println("donner un nombre n:"); 
     n = mynumber.nextInt(); 
@@ -61,4 +64,5 @@ class Main {
   
   
 }
+
 }
