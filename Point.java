@@ -31,7 +31,3 @@ public class Point {
         System.out.println("x=" +x+"y="+y);
     }
 }
-
-
-    
-}

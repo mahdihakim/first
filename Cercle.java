@@ -1,13 +1,13 @@
 import java.util.Scanner;
 public class Cercle {
     Scanner myobj=new Scanner(System.in);
-    Point c;
+    Point center;
     Double r;
     Cercle()
     {
-        c=new Point();
+        center=new Point();
         System.out.println("donner r:");
-        myobj.nextDouble();
+        r=myobj.nextDouble();
     }
     double Perimetre()
     {
@@ -19,8 +19,15 @@ public class Cercle {
     }
     void afficher()
     {
-        c.afficher()
+        center.afficher();
         System.out.println("r="+r);
         System.out.println("surface="+Surface());
+    }
+    public static void main(String[] args) {
+        Cercle c=new Cercle();
+        c.center.x=3;
+        c.r=4.0;
+        c.afficher();
+        
     }
 }
